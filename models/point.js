@@ -4,15 +4,16 @@ const mongoose = require('mongoose')
 
 const PollSchema = new mongoose.Schema({
   owner: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    index: true
+    type: mongoose.Schema.Types.Number
   },
   days: {
-    type: mongoose.Schema.Types.Array
+    type: [mongoose.Schema.Types.Number]
   },
   time: {
-    type: mongoose.Schema.Types.Date
+    type: mongoose.Schema.Types.Number
+  },
+  location: {
+    type: mongoose.Schema.Types.Object
   }
 }, {
   timestamps: true

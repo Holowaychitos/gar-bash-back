@@ -4,7 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "watch": "nodemon index.js"
+  },
+  "engines": {
+    "node": "8.x.x"
+  },
+  "now": {
+    "engines": {
+      "node": "8.x.x"
+    }
   },
   "keywords": [],
   "author": "Iddar Olivares <iddar@dbug.mx> (https://github.com/iddar)",

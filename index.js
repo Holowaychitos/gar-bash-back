@@ -34,9 +34,9 @@ app.use(bodyParser())
 app.use(logger)
 app.use(router.routes()).use(router.allowedMethods())
 
-mongoose.connect(process.env.DB, function (err, res) {
+mongoose.connect(process.env.DATA_BASE, function (err, res) {
   if (err) {
-    console.log('ERROR connecting to: ' + process.env.DB + '. ' + err)
+    console.log('ERROR connecting to: ' + process.env.DATA_BASE + '. ' + err)
     process.exit(1)
   }
   console.log('Succeeded connected to: Mongo DB')
