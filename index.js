@@ -17,6 +17,7 @@ const environment = process.env.NODE_ENV || 'development'
 const port = process.env.PORT || 8080
 
 require('./routes/filter')(router)
+require('./routes/iot')(router)
 
 router.get('/', async (ctx, next) => {
   ctx.body = 'Super API'
@@ -40,12 +41,11 @@ mongoose.connect(process.env.DATA_BASE, function (err, res) {
     process.exit(1)
   }
   console.log('Succeeded connected to: Mongo DB')
-  
+
   app.listen(port, function () {
     console.log(`Run in ${process.env.NODE_ENV || 'develepment'} mode`)
     console.log(`Server: http://localhost:${port}`)
   })
 })
-  
 
 module.exports = app
